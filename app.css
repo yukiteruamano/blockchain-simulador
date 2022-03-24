@@ -55,6 +55,7 @@ block .well-sm {
 .navbar-text {
     margin-top: 10px;
     margin-bottom: 8px;
+    color:#fff;
 }
 
 h1 chain-info, h3 peer-info {
@@ -68,7 +69,7 @@ strong {
 }
 
 a, a:hover, a:focus {
-    color: #89cc2d;
+    color: #ff6600;
     text-decoration: none;
     -o-transition: all .6s;
     -moz-transition: all .6s;
@@ -116,7 +117,7 @@ img {
 
 .navbar {
     margin-bottom: 0;
-    background: #5a4d45;
+    background: #02264a;
     border: 0;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
@@ -140,7 +141,7 @@ ul.navbar-nav {
 }
 
 .navbar-inverse ul.navbar-nav li a:hover {
-    color: #fff;
+    color: #ff6600;
     opacity: 1;
     border: 0;
 }
@@ -168,7 +169,7 @@ ul.navbar-nav {
     margin: 0;
     padding: 0 15px;
     vertical-align: middle;
-    background: #89cc2d;
+    background: #ff6600;
     border: 0;
     font-family: 'Raleway', sans-serif;
     font-size: 15px;
@@ -276,12 +277,7 @@ hr {
 
 div.as-block.input-group {
   display: inline-block;
-  
-  /*    Limpiando CSS de la web 
-
   float: left;
-  
-  */
 }
 
 div.as-block.input-group span {
@@ -292,9 +288,5 @@ div.as-block.input-group input,
 div.as-block.input-group span,
 div.as-block.input-group select.form-control {
   display: inline-block;
-    /*    Limpiando CSS de la web 
-
   float: left;
-  
-  */
 }

@@ -45,26 +45,6 @@ angular.module('app').run(['$templateCache', function($templateCache) {
     "                <li ng-class=\"{active: $root.isActive('/coinbase')}\">\n" +
     "                    <a href=\"#!/coinbase\">Coinbase</a>\n" +
     "                </li>\n" +
-    "\n" +
-    "                <!--\n" +
-    "                    Redirección a la sección de simulador de criptografía\n" +
-    "                -->\n" +
-    "\n" +
-    "                <li class=\"dropdown\">\n" +
-    "                    <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\">\n" +
-    "                        Advanced <span class=\"caret\"></span>\n" +
-    "                    </a>\n" +
-    "                    <ul class=\"dropdown-menu\">\n" +
-    "                        <li>\n" +
-    "                            <a href=\"https://guggero.github.io/cryptography-toolkit/\">Cryptography Toolkit</a>\n" +
-    "                        </li>\n" +
-    "                    </ul>\n" +
-    "                </li>\n" +
-    "\n" +
-    "                <!--\n" +
-    "                    Fin de la redirección a la sección de simulador de criptografía\n" +
-    "                -->\n" +
-    "\n" +
     "            </ul>\n" +
     "        </div>\n" +
     "    </div>\n" +
@@ -81,7 +61,7 @@ angular.module('app').run(['$templateCache', function($templateCache) {
     "    <form class=\"form-horizontal\">\n" +
     "        <!-- Block number -->\n" +
     "        <div class=\"form-group\">\n" +
-    "            <label for=\"block{{vm.id}}number\" class=\"col-sm-2 control-label\">Block:</label>\n" +
+    "            <label for=\"block{{vm.id}}number\" class=\"col-sm-2 control-label\">Bloque:</label>\n" +
     "            <div class=\"col-sm-10\">\n" +
     "                <div class=\"input-group\">\n" +
     "                    <span class=\"input-group-addon\">#</span>\n" +
@@ -1033,7 +1013,7 @@ angular.module('app').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('pages/block/block.html',
-    "<h1>Block</h1>\n" +
+    "<h1>Bloque</h1>\n" +
     "\n" +
     "<div class=\"panel panel-default\">\n" +
     "    <div class=\"panel-heading\">\n" +
@@ -1134,7 +1114,27 @@ angular.module('app').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('pages/coinbase/coinbase.html',
-    "<h1>Coinbase Transactions</h1>\n" +
+    "<h1>Transacción Coinbase</h1>\n" +
+    "\n" +
+    "<div class=\"panel panel-default\">\n" +
+    "    <div class=\"panel-heading\">\n" +
+    "        <h4 class=\"panel-title\">\n" +
+    "            <a ng-click=\"vm.showExplanation = !vm.showExplanation\">Explicación</a>\n" +
+    "        </h4>\n" +
+    "    </div>\n" +
+    "    <div class=\"panel-collapse collapse\" ng-class=\"{in: vm.showExplanation}\">\n" +
+    "        <div class=\"panel-body\">\n" +
+    "            Una transacción coinbase, es una transacción especial creada por los mineros con el fin de permitirles generar y obtener la recompensa de un bloque de Bitcoin. \n" +
+    "            Esto junto al cobro de las comisiones correspondientes a todas las transacciones que han sido incluidas en dicho bloque.\n" +
+    "            \n" +
+    "            <h3>Links:</h3>\n" +
+    "            <ul>\n" +
+    "                <li><a href=\"https://academy.bit2me.com/que-es-coinbase-transaccion/\">Bit2Me Academy - ¿Qué es una transacción coinbase?</a></li>\n" +
+    "            </ul>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
     "<div ng-repeat=\"peer in vm.peers\">\n" +
     "    <h3>{{peer.name}}\n" +
     "        <peer-info ng-if=\"$root.expertMode\" peers=\"vm.peers\" peer-index=\"$index\"></peer-info>\n" +
@@ -1155,7 +1155,31 @@ angular.module('app').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('pages/distributed/distributed.html',
-    "<h1>Distributed Blockchain</h1>\n" +
+    "<h1>Blockchain Distribuida</h1>\n" +
+    "\n" +
+    "<div class=\"panel panel-default\">\n" +
+    "    <div class=\"panel-heading\">\n" +
+    "        <h4 class=\"panel-title\">\n" +
+    "            <a ng-click=\"vm.showExplanation = !vm.showExplanation\">Explicación</a>\n" +
+    "        </h4>\n" +
+    "    </div>\n" +
+    "    <div class=\"panel-collapse collapse\" ng-class=\"{in: vm.showExplanation}\">\n" +
+    "        <div class=\"panel-body\">\n" +
+    "            \n" +
+    "            <p>El funcionamiento de una blockchain se asienta sobre la descentralización o distribución de sus nodos y la información de la misma. \n" +
+    "                La idea básica es que cada nodo tiene su propia copia completa (o parcial) de todos los datos de la red, de manera que pueda verificar cualquier operación de forma autonóma en cualquier momento.\n" +
+    "                \n" +
+    "                De esta forma, la red mantiene la coherencia e integridad de los datos en todo momento, a la vez que garantiza que los datos estarán disponibles a cualquiera que los requiera en todo momento\n" +
+    "            </p>\n" +
+    "\n" +
+    "            <h3>Links:</h3>\n" +
+    "            <ul>\n" +
+    "                <li><a href=\"https://academy.bit2me.com/tipos-redes-criptomonedas/\">Bit2Me Academy - Redes de criptomonedas ¿Qué tipos existen?</a></li>\n" +
+    "            </ul>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
     "<div ng-repeat=\"peer in vm.peers\">\n" +
     "    <h3>{{peer.name}}\n" +
     "        <peer-info ng-if=\"$root.expertMode\" peers=\"vm.peers\" peer-index=\"$index\"></peer-info>\n" +
@@ -1176,7 +1200,7 @@ angular.module('app').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('pages/hash/hash.html',
-    "<h1>SHA256 Hash</h1>\n" +
+    "<h1>Función Hash SHA-256</h1>\n" +
     "\n" +
     "<div class=\"panel panel-default\">\n" +
     "    <div class=\"panel-heading\">\n" +
@@ -1199,9 +1223,9 @@ angular.module('app').run(['$templateCache', function($templateCache) {
     "                informática y el usado por Bitcoin para sus operaciones. \n" +
     "            </p>\n" +
     "\n" +
-    "            <br>Ejemplos:\n" +
+    "            <strong>Ejemplos</strong></br>\n" +
     "            <p>\n" +
-    "                Si escribes \"¡Hola mundo!\", podrás ver el hash SHA-256: be95feded82029acd290e2f9bf3e0dd8e21922c9ce045120ed4e0cff0ae69063.\n" +
+    "                Si escribes \"¡Hola mundo!\", podrás ver el hash <strong>SHA-256: be95feded82029acd290e2f9bf3e0dd8e21922c9ce045120ed4e0cff0ae69063.</strong>\n" +
     "                No importa, cuantas veces lo escriba, recibirás siempre el mismo hash por los mismos datos. <strong>¡Pruebalo!</strong>\n" +
     "            </p>\n" +
     "            \n" +
@@ -1212,7 +1236,7 @@ angular.module('app').run(['$templateCache', function($templateCache) {
     "<div class=\"well\">\n" +
     "    <form class=\"form-horizontal\">\n" +
     "        <div class=\"form-group\">\n" +
-    "            <label for=\"data\" class=\"col-sm-2 control-label\">Input:</label>\n" +
+    "            <label for=\"data\" class=\"col-sm-2 control-label\">Entrada:</label>\n" +
     "            <div class=\"col-sm-10\">\n" +
     "                <textarea id=\"data\"\n" +
     "                          rows=\"10\"\n" +
@@ -1223,7 +1247,7 @@ angular.module('app').run(['$templateCache', function($templateCache) {
     "            </div>\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
-    "            <label for=\"hash\" class=\"col-sm-2 control-label\">Hash:</label>\n" +
+    "            <label for=\"hash\" class=\"col-sm-2 control-label\">Hash SHA-256:</label>\n" +
     "            <div class=\"col-sm-10\">\n" +
     "                <input id=\"hash\"\n" +
     "                       ng-readonly=\"true\"\n" +
@@ -1247,12 +1271,37 @@ angular.module('app').run(['$templateCache', function($templateCache) {
     "asi como, comprender como se protege una blcockhain frente a cambios no deseados por parte de actores maliciosos. \n" +
     "\n" +
     "El simulador está basado en el trabajo de <a href=\"https://github.com/anders94\">Anders Brownworth.<br/>\n" +
-    "<br/><br/>\n"
+    "<br/><br/>\n" +
+    "\n" +
+    "<img src=\"https://academy.bit2me.com/wp-content/uploads/2020/08/seguridad-blockchain-mitos-bit2me-academy.png\" alt=\"Simulador Blockchain de Bit2Me\" style=\"display: flex; height: fit-content;\">\n"
   );
 
 
   $templateCache.put('pages/tokens/tokens.html',
     "<h1>Tokens</h1>\n" +
+    "\n" +
+    "<div class=\"panel panel-default\">\n" +
+    "    <div class=\"panel-heading\">\n" +
+    "        <h4 class=\"panel-title\">\n" +
+    "            <a ng-click=\"vm.showExplanation = !vm.showExplanation\">Explicación</a>\n" +
+    "        </h4>\n" +
+    "    </div>\n" +
+    "    <div class=\"panel-collapse collapse\" ng-class=\"{in: vm.showExplanation}\">\n" +
+    "        <div class=\"panel-body\">\n" +
+    "            <p>\n" +
+    "                Los tokens son objetos similares a las monedas pero estos carecen de valor de curso legal. \n" +
+    "                Esto se debe a que los tokens son emitidos por una entidad privada para un determinado uso y en su elaboración normalmente se hace uso de materiales de escaso valor.\n" +
+    "\n" +
+    "                Los tokens son una de las creaciones más esenciales de la tecnología blockchain y de las criptomonedas, encerrando características únicas y abriendo las puertas para aplicaciones que aún estamos por descubrir.\n" +
+    "            </p>\n" +
+    "            <h3>Links:</h3>\n" +
+    "            <ul>\n" +
+    "                <li><a href=\"https://academy.bit2me.com/que-es-un-token\">Bit2Me Academy - ¿Qué es un token?</a></li>\n" +
+    "            </ul>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
     "<div ng-repeat=\"peer in vm.peers\">\n" +
     "    <h3>{{peer.name}}\n" +
     "        <peer-info ng-if=\"$root.expertMode\" peers=\"vm.peers\" peer-index=\"$index\"></peer-info>\n" +

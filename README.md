@@ -1,31 +1,16 @@
-# Blockchain Demo
-A web-based demonstration of blockchain concepts.
+# Simulador Blockchain
+Un sencillo simulador para aprender sobre los conceptos básicos de la tecnología blockchain.
 
-[Live version](https://guggero.github.io/blockchain-demo/)
+Este simulador ha sido creado con el fin de explicar de forma grafica y sencilla, el funcionamiento de una blockchain y sus distintas partes. 
 
-This is a complete rewrite of [Anders Brownworth's Blockchain Demo](https://github.com/anders94/blockchain-demo) with
-lots of additional features.
-Basically only the idea shown in his [excellent Demo Video](https://www.youtube.com/watch?v=_160oMzblY8) remains,
-the code is completely different. That's why it's not a fork any more but a standalone repository.
+De esta forma podrás comprender como se generan los bloques, el papel que juegan las primitivas criptográficas y de consenso, 
+asi como, comprender como se protege una blcockhain frente a cambios no deseados por parte de actores maliciosos. 
 
-If you are looking for the cryptographic tools that were found behind the
-"Advanced" menu, [they have been moved to their own project](https://github.com/guggero/cryptography-toolkit/).
+El simulador está basado en el trabajo de [Anders Brownworth](https://github.com/anders94)
 
-Changes in detail:
-* Static HTML/JS, so it can be served with GitHub Pages
-* Use AngularJS for rendering the page
-* Add explanations to most pages
-* Expert Mode that shows many details
-* Show/implement concept of mining difficulty (in Expert Mode)
-* Show duration and speed of mining process (in Expert Mode)
-* Toggle between TX/Coinbase and Data view
+# Modo de uso
 
-## Send Thanks
+Para usar el simulador todo lo que debes hacer es clonar o descargar el código fuente de este repositorio. 
+Una vez hecho, basta con abrir index.html en tu navegador, y ya podrás usar el simulador en tu computador. 
 
-Created by [Oliver Gugger](https://github.com/guggero):
-* BTC tip address: `bc1qfgua5vhwm6myajak9p4crhwmwm2k6mczf789eh`
-
-Original idea by, [anders94](https://github.com/anders94):
-* BTC: `1K3NvcuZzVTueHW1qhkG2Cm3viRkh2EXJp`
-* ETH: `0x84a90e21d9d02e30ddcea56d618aa75ba90331ff`
-
+![alt text for screen readers](/images/blockchain-bit2me.png) 
