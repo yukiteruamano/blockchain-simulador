@@ -8,9 +8,22 @@ asi como, comprender como se protege una blcockhain frente a cambios no deseados
 
 El simulador está basado en el trabajo de [Anders Brownworth](https://github.com/anders94)
 
+![Simulador de blockchains de Bit2Me](/images/blockchain-bit2me.png) 
+
 # Modo de uso
 
-Para usar el simulador todo lo que debes hacer es clonar o descargar el código fuente de este repositorio. 
-Una vez hecho, basta con abrir index.html en tu navegador, y ya podrás usar el simulador en tu computador. 
+Para usar el simulador todo lo que debes hacer es clonar o descargar el código fuente de este repositorio. Una vez hecho, basta con abrir index.html en tu navegador, y ya podrás usar el simulador en tu computador. 
 
-![alt text for screen readers](/images/blockchain-bit2me.png) 
+## Descargar simulador
+#
+
+Para descargar el simuldor tienes dos formas:
+
+- Descargando el [zip](https://gitlab.com/YukiteruAmano/simulador-blockchain/-/archive/master/simulador-blockchain-master.zip) con el contenido del simulador. 
+- Realizando un clone del repositorio usando GIT.
+
+## Iniciando el simulador
+#
+Para iniciar el simulador solo basta con descomprimir (en caso de haber descargado el zip) o ir al directorio de clonación de Git y abrir el archivo **index.html**. Hecho esto, verás en tu navegadaor el simulador abierto y listo para ser usado. 
+
+![Simulador de blockchains de Bit2Me](/images/blockchain-bit2me-browser.png) 
