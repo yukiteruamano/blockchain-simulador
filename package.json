@@ -1,8 +1,8 @@
 {
-  "name": "blockchain-demo",
+  "name": "simulador-blockchain",
   "version": "1.0.0",
-  "repository": "git@github.com:guggero/blockchain-demo.git",
-  "author": "Oliver Gugger <gugger@gmail.com>",
+  "repository": "git@gitlab.com:YukiteruAmano/simulador-blockchain.git",
+  "author": "Jose Maldonado <josemald89@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
