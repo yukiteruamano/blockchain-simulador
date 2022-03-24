@@ -15,7 +15,6 @@ El simulador está basado en el trabajo de [Anders Brownworth](https://github.co
 Para usar el simulador todo lo que debes hacer es clonar o descargar el código fuente de este repositorio. Una vez hecho, basta con abrir index.html en tu navegador, y ya podrás usar el simulador en tu computador. 
 
 ## Descargar simulador
-#
 
 Para descargar el simuldor tienes dos formas:
 
@@ -23,7 +22,6 @@ Para descargar el simuldor tienes dos formas:
 - Realizando un clone del repositorio usando GIT.
 
 ## Iniciando el simulador
-#
 Para iniciar el simulador solo basta con descomprimir (en caso de haber descargado el zip) o ir al directorio de clonación de Git y abrir el archivo **index.html**. Hecho esto, verás en tu navegadaor el simulador abierto y listo para ser usado. 
 
 ![Simulador de blockchains de Bit2Me](/images/blockchain-bit2me-browser.png) 
