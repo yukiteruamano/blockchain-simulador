@@ -26,26 +26,6 @@ angular.module('app').run(['$templateCache', function($templateCache) {
     "                    Activar Modo Experto\n" +
     "                </button>\n" +
     "            </form>\n" +
-    "            <ul class=\"nav navbar-nav navbar-right\">\n" +
-    "                <li ng-class=\"{active: $root.isActive('/hash')}\">\n" +
-    "                    <a href=\"#!/hash\">Hash</a>\n" +
-    "                </li>\n" +
-    "                <li ng-class=\"{active: $root.isActive('/block')}\">\n" +
-    "                    <a href=\"#!/block\">Block</a>\n" +
-    "                </li>\n" +
-    "                <li ng-class=\"{active: $root.isActive('/blockchain')}\">\n" +
-    "                    <a href=\"#!/blockchain\">Blockchain</a>\n" +
-    "                </li>\n" +
-    "                <li ng-class=\"{active: $root.isActive('/distributed')}\">\n" +
-    "                    <a href=\"#!/distributed\">Distribuido</a>\n" +
-    "                </li>\n" +
-    "                <li ng-class=\"{active: $root.isActive('/tokens')}\">\n" +
-    "                    <a href=\"#!/tokens\">Tokens</a>\n" +
-    "                </li>\n" +
-    "                <li ng-class=\"{active: $root.isActive('/coinbase')}\">\n" +
-    "                    <a href=\"#!/coinbase\">Coinbase</a>\n" +
-    "                </li>\n" +
-    "            </ul>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</nav>\n" +
@@ -177,6 +157,7 @@ angular.module('app').run(['$templateCache', function($templateCache) {
     "<head>\n" +
     "  <meta charset=\"UTF-8\">\n" +
     "  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n" +
+    "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n" +
     "\n" +
     "  <link rel=\"icon\" href=\"favicon.ico\">\n" +
     "\n" +
@@ -1100,7 +1081,7 @@ angular.module('app').run(['$templateCache', function($templateCache) {
     "</div>\n" +
     "\n" +
     "<div class=\"row row-horizon\">\n" +
-    "    <div class=\"col-xs-7 col-lg-5\" ng-repeat=\"block in vm.blocks\">\n" +
+    "    <div class=\"col-md-10\" ng-repeat=\"block in vm.blocks\">\n" +
     "        <block number=\"block.number\"\n" +
     "               nonce=\"block.nonce\"\n" +
     "               data=\"block.data\"\n" +
@@ -1140,7 +1121,7 @@ angular.module('app').run(['$templateCache', function($templateCache) {
     "        <peer-info ng-if=\"$root.expertMode\" peers=\"vm.peers\" peer-index=\"$index\"></peer-info>\n" +
     "    </h3>\n" +
     "    <div class=\"row row-horizon\">\n" +
-    "        <div class=\"col-xs-7\" ng-repeat=\"block in peer.blocks\">\n" +
+    "        <div class=\"col-md-10\" ng-repeat=\"block in peer.blocks\">\n" +
     "            <block number=\"block.number\"\n" +
     "                   nonce=\"block.nonce\"\n" +
     "                   data=\"block.data\"\n" +
@@ -1180,12 +1161,12 @@ angular.module('app').run(['$templateCache', function($templateCache) {
     "    </div>\n" +
     "</div>\n" +
     "\n" +
-    "<div ng-repeat=\"peer in vm.peers\">\n" +
+    "<div class=\"col-md-10 ng-scope\" ng-repeat=\"peer in vm.peers\">\n" +
     "    <h3>{{peer.name}}\n" +
     "        <peer-info ng-if=\"$root.expertMode\" peers=\"vm.peers\" peer-index=\"$index\"></peer-info>\n" +
     "    </h3>\n" +
     "    <div class=\"row row-horizon\">\n" +
-    "        <div class=\"col-xs-7 col-lg-5\" ng-repeat=\"block in peer.blocks\">\n" +
+    "        <div class=\"col-md-10 ng-scope\" ng-repeat=\"block in peer.blocks\">\n" +
     "            <block number=\"block.number\"\n" +
     "                   nonce=\"block.nonce\"\n" +
     "                   data=\"block.data\"\n" +
@@ -1271,7 +1252,28 @@ angular.module('app').run(['$templateCache', function($templateCache) {
     "asi como, comprender como se protege una blcockhain frente a cambios no deseados por parte de actores maliciosos. \n" +
     "\n" +
     "El simulador está basado en el trabajo de <a href=\"https://github.com/anders94\">Anders Brownworth.<br/>\n" +
-    "<br/><br/>\n" +
+    "\n" +
+    "<h3>Funciones del simulador</h3>\n" +
+    "<ul>\n" +
+    "    <li >\n" +
+    "        <a href=\"#!/hash\">Hash</a>\n" +
+    "    </li>\n" +
+    "    <li >\n" +
+    "        <a href=\"#!/block\">Block</a>\n" +
+    "    </li>\n" +
+    "    <li >\n" +
+    "        <a href=\"#!/blockchain\">Blockchain</a>\n" +
+    "    </li>\n" +
+    "    <li >\n" +
+    "        <a href=\"#!/distributed\">Distribuido</a>\n" +
+    "    </li>\n" +
+    "    <li >\n" +
+    "        <a href=\"#!/tokens\">Tokens</a>\n" +
+    "    </li>\n" +
+    "    <li >\n" +
+    "        <a href=\"#!/coinbase\">Coinbase</a>\n" +
+    "    </li>\n" +
+    "</ul>\n" +
     "\n" +
     "<img src=\"https://academy.bit2me.com/wp-content/uploads/2020/08/seguridad-blockchain-mitos-bit2me-academy.png\" alt=\"Simulador Blockchain de Bit2Me\" style=\"display: flex; height: fit-content;\">\n"
   );
@@ -1307,7 +1309,7 @@ angular.module('app').run(['$templateCache', function($templateCache) {
     "        <peer-info ng-if=\"$root.expertMode\" peers=\"vm.peers\" peer-index=\"$index\"></peer-info>\n" +
     "    </h3>\n" +
     "    <div class=\"row row-horizon\">\n" +
-    "        <div class=\"col-xs-7\" ng-repeat=\"block in peer.blocks\">\n" +
+    "        <div class=\"col-md-10\" ng-repeat=\"block in peer.blocks\">\n" +
     "            <block number=\"block.number\"\n" +
     "                   nonce=\"block.nonce\"\n" +
     "                   data=\"block.data\"\n" +

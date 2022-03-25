@@ -23,12 +23,12 @@
     </div>
 </div>
 
-<div ng-repeat="peer in vm.peers">
+<div class="col-md-10 ng-scope" ng-repeat="peer in vm.peers">
     <h3>{{peer.name}}
         <peer-info ng-if="$root.expertMode" peers="vm.peers" peer-index="$index"></peer-info>
     </h3>
     <div class="row row-horizon">
-        <div class="col-xs-7 col-lg-5" ng-repeat="block in peer.blocks">
+        <div class="col-md-10 ng-scope" ng-repeat="block in peer.blocks">
             <block number="block.number"
                    nonce="block.nonce"
                    data="block.data"
